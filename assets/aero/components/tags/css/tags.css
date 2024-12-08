@@ -1,0 +1,137 @@
+.a-tags {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+
+  &.a-tags--open {
+    z-index: 2;
+
+    .a-tags__box {
+      display: flex;
+    }
+
+    .a-tags__btn {
+      background-color: var(--aero-gray6);
+    }
+
+    .a-tags__icon-close {
+      opacity: 1;
+    }
+
+    .a-tags__icon-open {
+      opacity: 0;
+    }
+  }
+}
+
+.a-tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  height: 27px;
+  overflow: hidden;
+
+  &.a-tags__list--fixed {
+    flex-wrap: nowrap;
+
+    @media all and (max-width: 1439px) {
+      height: auto;
+      flex-wrap: wrap;
+    }
+  }
+
+  &.a-tags__list--box {
+    padding-right: 46px;
+
+    .a-tags__btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+  }
+}
+
+.a-tags__item {
+  font-family: "TT Firs Neue";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: 27px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--aero-gray20);
+  color: var(--aero-white);
+  background-color: var(--aero-gray4);
+
+  &.dark {
+    background-color: var(--aero-gray6);
+  }
+
+  &.fixed {
+    justify-content: center;
+    width: calc(33.33% - 16.6666px);
+
+    @media all and (max-width: 1439px) {
+      width: calc(50% - 4px);
+    }
+  }
+}
+
+.a-tags__item-truncate {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.a-tags__btn {
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  width: 38px;
+  height: 27px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--aero-gray20);
+  color: var(--aero-white);
+  background-color: var(--aero-gray4);
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &.a-tags__btn--visible {
+    display: flex;
+  }
+}
+
+.a-tags__icon-close,
+.a-tags__icon-open {
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.a-tags__icon-close {
+  opacity: 0;
+}
+
+.a-tags__box {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  display: none;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: var(--aero-gray4);
+  width: calc(100% + 8px);
+
+  .a-tags__list {
+    height: auto;
+  }
+}

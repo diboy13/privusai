@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: local('TT Firs Neue Demi Bold'), local('TT-Firs-Neue-Demi-Bold'),
+        url('TTFirsNeue-DemiBold.woff2') format('woff2'),
+        url('TTFirsNeue-DemiBold.html') format('woff'),
+        url('TTFirsNeue-DemiBold-2.html') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }

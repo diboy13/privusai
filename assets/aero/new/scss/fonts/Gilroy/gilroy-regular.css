@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('Gilroy.eot'); /* IE 9 Compatibility Mode */
+  src:
+    url('Gilroyd41d.eot?#iefix') format('embedded-opentype'),
+    /* IE < 9 */ url('Gilroy.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('Gilroy.woff') format('woff'),
+    /* Firefox >= 3.6, any other modern browser */ url('Gilroy.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */ url('Gilroy.svg#gilroy-regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}

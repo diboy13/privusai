@@ -1,0 +1,102 @@
+.autossh-h-p {
+    border: none;
+    border-radius: 40px;
+    background-color: var(--aero-gray4);
+    padding: 40px;
+    width: 800px;
+    flex-wrap: nowrap;
+
+    .gift-top {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        margin: 0 0 24px;
+
+        .gift-top-txt {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        .gift-close {
+            cursor: pointer;
+        }
+    }
+
+    .autossh-info-body {
+        padding: 0 10px 0 0;
+
+        .autossh-container {
+            border-radius: 12px;
+            border: 1px solid var(--aero-gray3);
+            background-color: transparent;
+            padding: 24px;
+            height: auto;
+            overflow: auto;
+
+            .aero-b4 {
+                margin: 0;
+                color: var(--aero-white60);
+            }
+        }
+
+        .aero-b2 {
+            margin-bottom: 8px;
+        }
+
+        .aero-b4 {
+            margin: 8px 0;
+        }
+    }
+
+    .aero-caption {
+        color: var(--aero-white60);
+    }
+}
+
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+
+.autossh-info-body::-webkit-scrollbar {
+    background-color: var(--aero-gray4);
+    width: 16px
+}
+
+/* background of the scrollbar except button or resizer */
+
+.autossh-info-body::-webkit-scrollbar-track {
+    background-color: var(--aero-gray4)
+}
+
+.autossh-info-body::-webkit-scrollbar-track:hover {
+    /*background-color: var(--aero-white40)*/
+}
+
+/* scrollbar itself */
+
+.autossh-info-body::-webkit-scrollbar-thumb {
+    background-color: var(--aero-white40);
+    border-radius: 16px;
+    border: 5px solid var(--aero-gray4)
+}
+
+.autossh-info-body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--aero-white40);
+    /*border: 4px solid var(--aero-white40)*/
+}
+
+/* set button(top and bottom of the scrollbar) */
+
+.autossh-info-body::-webkit-scrollbar-button {
+    display: none
+}
+
+/*!* For Firefox *!*/
+
+.firefox {
+    scrollbar-width: thin; /* Can be auto, thin, or none */
+    scrollbar-color: var(--aero-white40) var(--aero-gray4); /* thumb color and track color */
+}

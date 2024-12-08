@@ -1,0 +1,141 @@
+/* 1440px */
+@media all and (max-width: 1919px) {
+    #mt-create-order {
+        .accordion-wrapper {
+            width: 643px;
+        }
+    }
+}
+
+/* 1200px */
+@media all and (max-width: 1439px) {
+    .v2-no-server-specs {
+        .accordion-wrapper {
+            width: 352px;
+        }
+
+        .specs-wrapper {
+            width: 675px;
+
+            .specs-data {
+                gap: 106px;
+            }
+        }
+    }
+}
+
+/* 992px */
+@media all and (max-width: 1199px) {
+
+    .v2-no-server-specs {
+        margin-bottom: 80px;
+
+        .accordion-wrapper {
+            width: 311px;
+        }
+
+        .specs-wrapper {
+            width: 600px;
+
+            .specs-data {
+                gap: 70px;
+            }
+        }
+    }
+}
+
+.v2-no-server-specs {
+    justify-content: space-between;
+    margin: 0 0 100px;
+    max-width: none;
+    width: 100%;
+    gap: 10px;
+
+    .aero-b4, .aero-caption {
+        color: var(--aero-white60);
+    }
+
+}
+
+.specs-wrapper {
+    width: 950px;
+
+    .specs-data {
+        display: flex;
+        gap: 91px;
+        border-bottom: 1px solid var(--aero-white24);
+        margin-bottom: 16px;
+
+        .specs-title {
+            width: 217px;
+        }
+
+
+        .accordion-wrapper {
+            cursor: pointer;
+            width: 643px;
+        }
+
+        .accordion-wrapper[open] {
+            .specs-info::after {
+                rotate: 0deg;
+            }
+        }
+
+        .specs-info {
+            display: flex;
+            margin-bottom: 12px;
+            padding-right: 25px;
+            position: relative;
+            width: 100%;
+
+            .specs-main-info {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+
+
+        .specs-info::after, .specs-info::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 20px;
+            height: 2px;
+            background-color: var(--aero-light-gray);
+            border-radius: 1px;
+            translate: 0 -35%;
+            transition: rotate 0.2s;
+            transform-origin: 50% 40%;
+        }
+
+        .specs-info::after {
+            rotate: -90deg;
+        }
+
+        .specs-extra-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 16px;
+
+            .specs-speed-data {
+                display: flex;
+                gap: 4px;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+summary::-webkit-details-marker {
+    /* Hides marker on Safari */
+    display: none;
+}
+
+.specs-data:nth-last-child(1) {
+    border: none;
+}

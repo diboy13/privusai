@@ -1,0 +1,129 @@
+/* Buttons */
+.aero-btn-primary,
+.aero-btn-secondary {
+  cursor: pointer;
+  border: 1px solid var(--aero-red);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--aero-white);
+  font-size: 18px;
+  padding: 12px 24px;
+  transition: border-color 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  * {
+    font-weight: 400 !important;
+    color: var(--aero-white) !important;
+  }
+
+  &:hover {
+    border-color: var(--aero-salmon);
+  }
+
+  /* for button */
+
+  &:disabled {
+    color: var(--aero-white40);
+    border-color: var(--aero-dark-red);
+    cursor: not-allowed;
+  }
+
+  span {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+
+    span {
+      opacity: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 25'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M3 12.5a9 9 0 1 0 9-9m5 9a5 5 0 1 0-5 5'/%3E%3C/svg%3E");
+      opacity: 1;
+      animation: spin 1.3s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.aero-btn-primary .fa-solid,
+.aero-btn-secondary .fa-solid {
+  font-weight: bold !important;
+}
+
+.aero-btn-primary {
+  background-color: var(--aero-red);
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--aero-salmon);
+  }
+
+  /* for button */
+
+  &:disabled {
+    background-color: var(--aero-dark-red);
+  }
+}
+
+.aero-btn-secondary {
+  background-color: transparent;
+}
+
+/* for div */
+.aero-btn-primary-disabled,
+.aero-btn-secondary-disabled {
+  color: var(--aero-white40);
+  border-color: var(--aero-dark-red);
+  cursor: not-allowed;
+  pointer-events: none;
+
+  &:hover {
+    border-color: var(--aero-dark-red);
+  }
+}
+
+.aero-btn-primary-disabled {
+  background-color: var(--aero-dark-red);
+
+  &:hover {
+    background-color: var(--aero-dark-red);
+  }
+}
+
+.aero-btn-primary-success,
+.aero-btn-secondary-success {
+  background-color: var(--aero-green) !important;
+  border-color: var(--aero-green) !important;
+  transition: all 0.3s ease-in-out !important;
+  pointer-events: none;
+  cursor: default;
+
+  &:hover {
+    background-color: var(--aero-green) !important;
+  }
+}

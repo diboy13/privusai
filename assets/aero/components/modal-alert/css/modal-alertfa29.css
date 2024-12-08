@@ -1,0 +1,118 @@
+.a-alert-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  opacity: 0;
+  z-index: 9999;
+  transition: opacity 0.15s linear;
+}
+
+.a-alert-wrapper.show {
+  opacity: 1;
+}
+
+.a-alert-wrapper.a-alert-open {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body.a-alert-open {
+  overflow: hidden;
+}
+
+.a-alert-dialog {
+  width: 370px;
+  max-height: calc(100vh - 20px);
+  margin: auto;
+  padding: 10px;
+}
+
+.a-alert-content {
+  font-family: "TT Firs Neue";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+  pointer-events: auto;
+  background-color: var(--aero-gray4);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  outline: 0;
+  color: var(--aero-white);
+}
+
+.a-alert-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+  color: var(--aero-white);
+}
+
+.a-alert-header {
+  height: 24px;
+}
+
+.a-alert-title {
+  font-family: "TT Firs Neue";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--aero-white);
+}
+
+.a-alert-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  font-family: "TT Firs Neue";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--aero-light-gray);
+}
+
+.a-alert-body > p {
+  text-align: center;
+}
+
+.a-alert-footer {
+  margin-top: 32px;
+}
+
+.a-alert-footer > button {
+  width: 100%;
+}
+
+.a-alert-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  opacity: 0;
+  background-color: #000;
+  transition: opacity 0.15s linear;
+  filter: blur(2px);
+}
+
+.a-alert-backdrop.show {
+  opacity: 0.5;
+}

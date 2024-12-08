@@ -1,0 +1,43 @@
+.rental-s-chart {
+    display: flex;
+    align-content: flex-start;
+    font-family: TT-Firs-Neue, sans-serif;
+    background-color: var(--aero-gray20);
+    border-radius: 40px;
+    border: 1px solid var(--aero-gray20);
+    padding: 40px;
+    height: 560px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 68px;
+
+    .grafana-timeframes {
+        margin-bottom: 32px;
+        border: none;
+        gap: 8px;
+
+        .grafana-time-btn {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--aero-white60);
+            height: 37px;
+            width: 80px;
+            border-radius: 15px;
+            border: 1px solid var(--aero-light-gray);
+            background-color: transparent;
+        }
+
+        .active-btn {
+            color: var(--aero-white);
+            background-color: var(--aero-gray5);
+            border-color: var(--aero-gray5);
+        }
+    }
+
+    #grafana-f {
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        height: calc(100% - 65px);
+    }
+}

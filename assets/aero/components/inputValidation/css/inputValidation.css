@@ -1,0 +1,9 @@
+input.is-error {
+  border-color: var(--aero-red) !important;
+}
+
+.error-msg {
+  display: block;
+  font-size: 14px;
+  color: var(--aero-red);
+}

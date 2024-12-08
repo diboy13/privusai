@@ -1,0 +1,45 @@
+.nt-nw {
+    width: 600px;
+    padding: 40px;
+    border: none;
+    border-radius: 40px;
+    background-color: var(--aero-gray4);
+
+    .gift-top {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        margin: 0 0 16px;
+
+        .gift-top-txt {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+
+            span {
+                font-size: 30px;
+                font-weight: 500;
+            }
+
+        }
+
+        .gift-close {
+            cursor: pointer;
+        }
+    }
+
+    .aero-b1 {
+        color: var(--aero-white60);
+        margin-bottom: 32px;
+    }
+
+    .aero-input-wrapper {
+        margin-bottom: 32px;
+
+        input {
+            width: 100%;
+            color: var(--aero-white);
+        }
+    }
+}

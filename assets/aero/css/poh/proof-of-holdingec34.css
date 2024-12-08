@@ -1,0 +1,591 @@
+/* 992px */
+@media all and (max-width: 1199px) {
+    #mt-proof-of-holding {
+        .poh-header {
+            margin-bottom: 24px;
+
+            .poh-header-first-line {
+                margin-bottom: 24px;
+            }
+        }
+        .mt-ms-content .benefits-wrapper {
+            margin-bottom: 90px;}
+    }
+}
+
+/* 1440px */
+@media all and (max-width: 1919px) {
+    #mt-proof-of-holding {
+    }
+}
+
+/* 1200px */
+@media all and (max-width: 1439px) {
+    #mt-proof-of-holding {
+        .future-tab-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 329px);
+        }
+    }
+}
+
+#mt-proof-of-holding {
+    .wallets-wrapper {
+        margin-bottom: 60px;
+
+        .wallets-wrapper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+
+            button span {
+                margin-left: 4px;
+            }
+        }
+
+        .poh-addresses-wrapper {
+            display: flex;
+            padding: 40px;
+            flex-direction: column;
+            gap: 16px;
+            border-radius: 40px;
+            border: 1px solid var(--aero-gray20);
+            background: var(--aero-gray20);
+
+            .poh-address {
+                display: flex;
+                justify-content: space-between;
+                gap: 16px;
+
+                .wallet-info {
+                    width: 100%;
+                    display: flex;
+                    padding: 8px 0;
+                    border-bottom: 1px solid var(--aero-gray46);
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 20px;
+
+                    .wallet-address-wrapper {
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+
+                        .poh-col-1 {
+                            height: 25px;
+                        }
+                    }
+
+                    .poh-col-3 {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    }
+                }
+
+                .poh-col-2 span {
+                    color: var(--aero-white60);
+                }
+            }
+        }
+    }
+
+    .benefits-wrapper {
+        margin-bottom: 160px;
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aero-h3 {
+            margin-bottom: 40px;
+        }
+
+        .tabs-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            gap: 8px;
+            border-radius: 20px;
+            background: var(--aero-gray20);
+            margin-bottom: 24px;
+
+            .tab-btn {
+                width: 100%;
+                border-radius: 16px;
+                background-color: transparent;
+                padding: 8px 0;
+                transition: background-color 0.4s;
+            }
+
+            .select-tab-btn {
+                background-color: var(--aero-red);
+            }
+        }
+
+        #tab-btn-2, #tab-btn-3, #table-usd {
+            display: none;
+        }
+
+    }
+
+    .aero-h3 {
+        font-weight: 600;
+    }
+}
+
+.poh-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .poh-header-first-line, .poh-header-second-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+    }
+
+    .poh-header-first-line {
+        margin-bottom: 33px;
+    }
+
+    p {
+        width: fit-content;
+    }
+
+    .total-info {
+
+        .total-counter {
+            white-space: nowrap;
+        }
+    }
+
+}
+
+.poh-addresses-empty {
+    border-radius: 40px;
+    border: 1px solid var(--aero-gray20);
+    background: var(--aero-gray20);
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        color: var(--aero-white60);
+    }
+}
+
+.wallets-counter-wrapper, .total-title, .poh-title {
+    color: var(--aero-white60);
+}
+
+.future-tab-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 329px);
+    gap: 16px;
+    grid-auto-flow: row;
+    margin-top: 32px;
+
+    .future-item {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 40px;
+        border: 1px solid var(--aero-gray46);
+
+        .future-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            span {
+                font-family: "TT-Firs-Neue-Medium", sans-serif !important;
+            }
+        }
+
+        .aero-b3 {
+            color: var(--aero-light-gray);
+        }
+    }
+}
+
+.PoH-tables {
+    border-radius: 40px;
+    border: 1px solid var(--aero-gray20);
+    background: var(--aero-gray20);
+    padding: 40px;
+
+    table {
+        width: 100%;
+
+        td {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--aero-gray46);
+        }
+
+        .amount-td {
+            color: var(--aero-white60);
+        }
+
+        .demand-fee-td {
+            width: 191px;
+        }
+
+        .spot-fee-td {
+            width: 216px;
+        }
+
+        .demand-fee-td, .spot-fee-td, .demand-fee-th, .spot-fee-th {
+            div {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+
+        .amount-th div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .amount-th div, .demand-fee-th, .spot-fee-th {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.order-fee-wrapper {
+    margin-top: 24px;
+
+    .order-fee-controls {
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+
+        .aero-b3 {
+            color: var(--aero-white60);
+        }
+
+        p {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        label {
+            margin: 0;
+            height: 32px;
+            width: 50px;
+        }
+    }
+}
+
+.provider-rewards-wrapper {
+    margin-top: 24px;
+
+    .exact-mechanism-doc {
+        border-radius: 12px;
+        border: 1px solid var(--aero-gray20);
+        background: var(--aero-gray20);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 24px;
+
+        p span {
+                color: var(--aero-red);
+        }
+
+        svg {
+            color: var(--aero-white60);
+            transition: color 0.4s;
+        }
+    }
+
+    .exact-mechanism-doc:hover {
+        svg {
+            color: var(--aero-white);
+        }
+    }
+}
+
+.PoH-CLORE-rewards-calc {
+    border-radius: 40px;
+    border: 1px solid var(--aero-gray20);
+    background: var(--aero-gray20);
+    padding: 40px;
+    padding-top: 27px;
+
+    .aero-input {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .PoH-calc-expected {
+        border-radius: 32px;
+        background: var(--aero-gray4);
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        gap: 8px;
+        margin-top: 24px;
+
+        .aero-b2 {
+            color: var(--aero-light-gray);
+        }
+
+        .poh-acc-r {
+            color: var(--aero-red);
+        }
+    }
+
+    .aero-input::placeholder {
+        font-size: 20px;
+    }
+}
+
+.add-wallet-bg {
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.329);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9900000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    .add-wallet-window {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        background-color: var(--aero-gray4);
+        border-radius: 40px;
+        padding: 40px;
+
+        .no-toplane {
+            height: auto;
+            border: none;
+            margin-bottom: 32px;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .no-top-txt {
+                margin: 0;
+                width: auto;
+
+                .aero-h3 {
+                    font-weight: 600;
+                }
+
+                #rs-top-txt {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+
+            .no-top-close {
+                cursor: pointer;
+            }
+        }
+
+        .add-wallet-input {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            height: 100%;
+
+            .aero-input {
+                width: 100%;
+            }
+
+            .poh-add-loading {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            .poh-rm-wallet-wi {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+
+                .aero-b1 {
+                    color: var(--aero-white60);
+                }
+
+                .poh-rm-btns {
+                    display: flex;
+                    gap: 8px;
+
+                    div {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .poh-add-info {
+                .aero-b1 {
+                    color: var(--aero-white60);
+                }
+            }
+        }
+    }
+}
+.PoH-C-top-line{
+    display: flex;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.PoH-C-top-line .PoH-C-1{
+    font-weight: 600;
+    width: calc(100% - 156px)!important;
+    display: inline-flex;
+    align-items: center;
+}
+.PoH-C-top-line button{
+    width: 156px;
+    padding: 12px;
+    height: 48px;
+    span{
+        margin-left: 4px;
+    }
+}
+.PoH-calc-machines{
+    display: flex;
+    width: 100%;
+    min-height: 0px;
+    flex-wrap: wrap;
+    gap: 10px 0;
+}
+
+.PoH-calc-machine{
+    display: flex;
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid rgba(80, 80, 80, 0.46);
+    padding: 8px;
+    padding-top: 6px;
+    flex-wrap: wrap;
+}
+
+.PoH-calc-machine-gpu-input{
+    position: relative;
+    display: inline-flex;
+    width: calc(67% - 10px);
+    min-width: 260px;
+    height: 50px;
+}
+.PoH-calc-machine-gpu-input .a-select{
+    width: 100%;
+    min-height: 50px;
+    position: absolute;
+    background-color: var(--aero-gray4);
+    z-index: 1000;
+}
+.PoH-calc-gpu-cnt, .PoH-calc-machine-rental-price, .PoH-calc-machine-mfp, .PoH-calc-machine-cnt{
+    display: inline-flex;
+    background-color: var(--aero-gray4);
+    width: 33%;
+    min-width: 170px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--aero-gray3);
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+.PoH-calc-gpu-cnt span, .PoH-calc-machine-rental-price span, .PoH-calc-machine-mfp span, .PoH-calc-machine-cnt span{
+    font-family: 'TT-Firs-Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.26px;
+    text-align: left;
+    color: var(--aero-white60);
+}
+.PoH-calc-gpu-cnt input, .PoH-calc-machine-rental-price input, .PoH-calc-machine-mfp input, .PoH-calc-machine-cnt input{
+    font-size: 14px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid var(--aero-gray3);
+    border-radius: 10px;
+}
+.PoH-calc-machine-top{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 6px;
+    position: relative;
+}
+.PoH-calc-machine-top span{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+.PoH-machine-universal {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 5px 0;
+}
+.PoH-calc-machine-prices{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+}
+.PoH-calc-machine-rental-price span, .PoH-calc-machine-mfp span, .PoH-calc-machine-cnt span{
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+.PoH-calc-machine-rental-price input, .PoH-calc-machine-mfp input{
+    min-width: 66px;
+}
+.PoH-calc-machine-rental-price, .PoH-calc-machine-mfp{
+    min-width: 202px;
+    width: 27%;
+}
+.PoH-calc-machine-cnt{
+    min-width: 213px;
+}
+.PoH-calc-machine-cnt input{
+    min-width: 40px;
+    margin-left: 5px;
+}
+.PoH-calc-machine-add-gpu{
+    display: inline-flex;
+    min-width: 105px;
+    width: 16%;
+}
+.PoH-calc-machine-add-gpu .aero-btn-primary{
+    padding: 4px;
+    width: 100%;
+}
+.PoH-calc-machine-top button{
+    padding: 0 6px;
+    border-radius: 6px;
+}
+.PoH-calc-machine-top .machine_type_if_poh-calc{
+    width: 100%;
+    text-align: center;
+    margin-left: 97.88px;
+}

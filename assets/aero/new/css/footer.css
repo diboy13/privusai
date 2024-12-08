@@ -1,0 +1,272 @@
+.footer {
+  padding: 80px 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #15141a;
+
+  @media all and (max-width: 1199px) {
+    padding: 40px 0 78px;
+  }
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+
+  @media all and (max-width: 1199px) {
+    justify-content: center;
+  }
+}
+
+.footer__mobail {
+  display: none;
+
+  @media all and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+.footer__mobail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-inner__left {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+
+  @media all and (max-width: 1199px) {
+    display: none;
+  }
+
+  .footer-inner__social {
+    margin-top: 54px;
+    margin-bottom: 40px;
+  }
+}
+
+.footer-inner__right {
+  width: 100%;
+
+  @media all and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.footer__logo {
+  width: 173px;
+  height: 58px;
+  margin-bottom: 32px;
+
+  @media all and (max-width: 1199px) {
+    width: 96px;
+    height: 32px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-inner__title {
+  font-family: "TT-Firs-Neue", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.24px;
+  color: var(--aero-white);
+  margin-bottom: 24px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.footer-grid__item {
+  display: flex;
+  flex-direction: column;
+
+  &.footer-grid__item--main {
+    width: 281px;
+  }
+  &.footer-grid__item--menu {
+    width: 154px;
+  }
+  &.footer-grid__item--documents {
+    width: 215px;
+  }
+  &.footer-grid__item--signin {
+    width: 198px;
+
+    @media all and (max-width: 1439px) {
+      display: none;
+    }
+  }
+}
+
+.footer-middle-links {
+  display: none;
+
+  @media all and (max-width: 1439px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 86px;
+  }
+}
+
+.footer-inner__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-inner__link {
+  font-family: "TT-Firs-Neue", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: #8F889A;
+  text-decoration: none;
+  border-bottom: 0;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--aero-white);
+  }
+}
+
+.footer-signin {
+  font-family: "TT-Firs-Neue", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.24px;
+  color: var(--aero-white);
+  margin-bottom: 24px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--aero-red);
+  }
+
+  @media all and (max-width: 1199px) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 99%;
+    margin-bottom: 0;
+  }
+}
+
+.footer-create {
+  font-family: "TT-Firs-Neue", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--aero-red);
+  text-decoration: none;
+  border-bottom: 0;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--aero-white);
+  }
+
+  @media all and (max-width: 1199px) {
+    font-size: 16px;
+    line-height: 99%;
+  }
+}
+
+.blog-clore__ai {
+  font-family: "TT-Firs-Neue", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 16px;
+  color: #8F889A;
+  text-decoration: none;
+  border-bottom: 0;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--aero-white);
+    border-bottom: 0;
+  }
+
+  @media all and (max-width: 1199px) {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-inner__mail {
+  font-family: "TT-Firs-Neue", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-decoration: underline;
+  margin-bottom: 16px;
+  color: var(--aero-white);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--aero-red);
+  }
+
+  @media all and (max-width: 1199px) {
+    font-size: 16px;
+  }
+}
+
+.footer-inner__copyright {
+  font-family: "TT-Firs-Neue", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 0;
+  color: #8F889A;
+
+  @media all and (max-width: 1199px) {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-inner__social {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-inner__social-link {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--aero-white);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--aero-red);
+  }
+}

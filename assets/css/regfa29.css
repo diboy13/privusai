@@ -1,0 +1,94 @@
+.clore-rega{
+    min-height: calc(100vh - 90px - 84px);
+}
+.g-recaptcha {
+    display: inline-block;
+}
+.gre-c{
+    text-align: center;
+}
+.clore-lwe{
+    font-weight: 700;
+    color: #fb0056 !important;
+}
+#clore-countdown{
+    font-weight: 500;
+}
+.specific-reg{
+    margin-bottom: 324px;
+}
+.reg-ct{
+    text-align: center;
+    width: 100%;
+}
+.reset-s, .pr-one1 span{
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    color: lime;
+    justify-content: center;
+}
+.pr-one1 i{
+    margin-right: 6px;
+}
+.reset-mail{
+    display: flex;
+    text-align: center;
+    font-size: 1.2rem;
+    justify-content: center;
+}
+.pwr-mail{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 124.28px;
+    margin-bottom: 124.28px;
+}
+.pwr-mail span{
+    color: white;
+    font-size: 20px;
+}
+.pr-one1{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}
+.pw-one-redir{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+    margin-top: 131px;
+    margin-bottom: 131px;
+}
+.pw-one-redir span{
+    color: white;
+    font-size: 16px;
+}
+.nl-fi-2{
+    display: flex;
+    width: 100%;
+    height: 0;
+}
+.nl-fi-2 div{
+    display: flex;
+    width: 100%;
+    background-color: #f73737;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 7px;
+    border-radius: 56px;
+    align-items: center;
+}
+.v2-rc-btn{
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 14px 23px;
+    font-size: 20px;
+    border-radius: inherit;
+    background-color: #f73737;
+}

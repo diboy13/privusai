@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from clore.ai/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Dec 2024 20:01:24 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIVUS AI</title>
+    <link rel="stylesheet" href="scss/fonts/Gilroy/gilroy-light.css" />
+    <link rel="stylesheet" href="scss/fonts/Gilroy/gilroy-regular.css" />
+    <link rel="stylesheet" href="scss/fonts/TTFirsNeue/light/style.css" />
+    <link rel="stylesheet" href="scss/fonts/TTFirsNeue/regular/style.css" />
+    <link rel="stylesheet" href="scss/fonts/TTFirsNeue/demibold/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/account4f96.css?v=1.12.1" />
+    <link rel="stylesheet" href="css/main6cd1.css?v=1.12.0" />
+    <link rel="stylesheet" href="assets/aero/css/global6cd1.css?v=1.12.0" />
+    <link rel="stylesheet" href="assets/aero/new/css/footer.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WSRR7J815J"
+    ></script>
+    <script src="assets/aero/js/analytics.js"></script>
+    <!-- / Google tag (gtag.js) / -->
+    <link
+      rel="shortcut icon"
+      href="images/privus-icon.png"
+      type="image/x-icon"
+    />
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/webutils.js"></script>
+    <script src="assets/js/globalfa29.js?v=1.13.0"></script>
+    <link rel="stylesheet" href="assets/fa-6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/globalfa29.css?v=1.13.0" />
+    <script type="text/javascript">
+      var _smartsupp = _smartsupp || {};
+      _smartsupp.key = "fdf8944be39ee3d295b57d9b2e03faecf11f0c9d";
+      //if(location.host.includes("clore.ai")) _smartsupp.hideWidget = true;
+      window.smartsupp ||
+        (function (d) {
+          var s,
+            c,
+            o = (smartsupp = function () {
+              o._.push(arguments);
+            });
+          o._ = [];
+          s = d.getElementsByTagName("script")[0];
+          c = d.createElement("script");
+          c.type = "text/javascript";
+          c.charset = "utf-8";
+          c.async = true;
+          c.src = "../www.smartsuppchat.com/loaderd41d.js?";
+          s.parentNode.insertBefore(c, s);
+        })(document);
+    </script>
+    <script>
+      function addDotsToNumber(number, milions) {
+        if (milions) {
+          return (parseFloat(number) / 10).toFixed(1);
+        } else {
+          const numberArray = String(number).split("");
+          numberArray.reverse();
+          for (let i = 3; i < numberArray.length; i += 4) {
+            numberArray.splice(i, 0, ".");
+          }
+          const formattedNumber = numberArray.reverse().join("");
+          return formattedNumber;
+        }
+      }
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+      function startCounterAnimation() {
+        var counters = document.querySelectorAll(".counter");
+
+        counters.forEach(function (counter) {
+          var target = parseInt(counter.getAttribute("data-target"));
+          var count = 0;
+          var animationDuration = 1600;
+
+          var updateCounter = function () {
+            var increment = (target / animationDuration) * 16;
+            count += increment;
+            if (count >= target) {
+              counter.textContent = addDotsToNumber(
+                target,
+                JSON.stringify(counter.classList).includes("counter-milions")
+              );
+            } else {
+              counter.textContent = addDotsToNumber(
+                Math.floor(count),
+                JSON.stringify(counter.classList).includes("counter-milions")
+              );
+              requestAnimationFrame(updateCounter);
+            }
+          };
+          updateCounter();
+        });
+      }
+
+      var rendered_counters = [];
+      function handleScroll() {
+        var counters = document.querySelectorAll(".counter"),
+          c_pos = 0;
+        counters.forEach(function (counter) {
+          if (
+            isElementInViewport(counter) &&
+            !rendered_counters.includes(c_pos)
+          ) {
+            rendered_counters.push(c_pos);
+            startCounterAnimation();
+          }
+          c_pos++;
+        });
+      }
+
+      // Add event listener for the scroll event
+      window.addEventListener("scroll", handleScroll);
+      document.addEventListener("DOMContentLoaded", function () {
+        var elements = document.getElementsByClassName("top__btns-wrapper");
+        for (var i = 0; i < elements.length; i++) {
+          var element = elements[i];
+          if (element.innerHTML.includes("Become a hoster"))
+            element.innerHTML = `<a href="https://www.youtube.com/watch?v=v_FGRamDKCQ" target="_blank"><button class="top__btn rent">Become a hoster</button></a>`;
+        }
+        var delay_to_url = {
+          300: "https://txbit.io/Trade/CLORE/USDT",
+          400: "https://xeggex.com/market/CLORE_USDT",
+          500: "https://www.indoex.io/trade/CLORE_USDT",
+          600: "https://safe.trade/trading/cloreusdt",
+        };
+        var exchange_links = document.getElementsByClassName(
+          "competitors-bottom__item"
+        );
+        for (var i = 0; i < exchange_links.length; i++) {
+          let cdd = exchange_links[i].getAttribute("data-aos-delay");
+          if (delay_to_url[cdd]) {
+            exchange_links[i].innerHTML = exchange_links[i].innerHTML.replace(
+              /href="#"/g,
+              `href="${delay_to_url[cdd]}" target="_blank"`
+            );
+          }
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <img
+      class="particles-top particles-top--remove"
+      src="images/line-bg-v2.svg"
+      alt="lines"
+    />
+    <img
+      class="particles-bottom particles-bottom--remove"
+      src="images/line-bg2.svg"
+      alt="lines"
+    />
+    <header class="header">
+      <div class="header__circle-left"></div>
+      <div class="header__circle-right"></div>
+      <div class="top-items">
+        <div class="top-items__item top-items__item--remove item1">
+          <div class="top-items__line1"></div>
+        </div>
+        <div class="top-items__item top-items__item--remove item2">
+          <div class="top-items__line2"></div>
+        </div>
+        <div class="top-items__item top-items__item--remove item3">
+          <div class="top-items__line3"></div>
+        </div>
+      </div>
+      <div class="container">
+        <!-- <div class="burger-menu">
+          <div class="container">
+            <nav class="burger-menu__nav">
+              <div class="burger-menu__box">
+                <div class="nav__logo-wrapper">
+                  <a class="nav__logo-link" href="_.html">
+                    <img
+                      class="nav__logo"
+                      src="images/nav-logo.svg"
+                      alt="logo"
+                    />
+                  </a>
+                </div>
+                <button class="burger-btn">
+                  <img
+                    class="burger-btn__icon"
+                    src="images/burger-close.svg"
+                    alt="icon"
+                  />
+                </button>
+              </div>
+              <ul class="burger-menu__list">
+                <li class="burger-menu__item">
+                  <a href="#" class="burger-menu__link">Home</a>
+                </li>
+                <li class="burger-menu__item">
+                  <a href="#use-cases" class="burger-menu__link">Suite</a>
+                </li>
+                <li class="burger-menu__item">
+                  <a href="#distributed" class="burger-menu__link"
+                    >Core Values</a
+                  >
+                </li>
+                <li class="burger-menu__item">
+                  <a
+                    class="burger-menu__link"
+                    href="https://exploreblockchain.clore.ai/"
+                    >Explorer</a
+                  >
+                </li>
+                <li class="burger-menu__item">
+                  <a class="burger-menu__link" href="https://opendata.clore.ai/"
+                    >Statistics
+                  </a>
+                </li>
+                <li class="burger-menu__item">
+                  <a class="burger-menu__link" href="roadmap.html">Roadmap</a>
+                </li>
+                <li class="burger-menu__item burger-menu__login-item"></li>
+              </ul>
+            </nav>
+          </div>
+        </div> -->
+        <nav class="nav nav--removeEA">
+          <div class="nav__logo-wrapper">
+            <a class="nav__logo-link" href="#">
+              <img class="nav__logo" src="images/nav-logo.png" alt="logo" />
+            </a>
+            <p class="logo-title">PRIVUS AI</p>
+          </div>
+          <!-- <ul class="nav__lists">
+            <li class="nav__list">
+              <a class="nav__link marketplace" href="marketplace.html"
+                >Marketplace</a
+              >
+            </li>
+            <li class="nav__list">
+              <a class="nav__link wallet" href="poh-marketplace.html"
+                >PoH rent</a
+              >
+            </li>
+            <li class="nav__list nav__list--center">
+              <a class="nav__link wallet" href="wallet.html">Wallet</a>
+              <ul class="nav__sublist" style="display: none">
+                <li class="nav__list">
+                  <a
+                    class="nav__link explorer"
+                    href="https://exploreblockchain.clore.ai/"
+                    >Explorer</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav__list">
+              <a class="nav__link nav-team" href="https://opendata.clore.ai/"
+                >Statistics
+              </a>
+            </li>
+            <li class="nav__list">
+              <a class="nav__link roadmap-link" href="roadmap.html">Roadmap</a>
+            </li>
+          </ul> -->
+
+          <!-- <button class="burger-btn">
+            <img
+              class="burger-btn__icon"
+              src="images/burger-icon.svg"
+              alt="icon"
+            />
+          </button> -->
+        </nav>
+        <section class="top">
+          <div class="top__content">
+            <h1 class="top__title">
+              Privacy. <br />
+              Security. <br />
+              Confidentiality.
+            </h1>
+            <p class="top__text">
+              A comprehensive protection arrangement including a assortment of
+              AI-based security instruments that redistributes 100% income to
+              Privus AI holders.
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="bottom-items"></div>
+      <div class="bottom">
+        <div class="mouse">
+          <div class="mouse__btn"></div>
+        </div>
+        <p class="bottom__text">
+          Scroll<br />
+          to explore
+        </p>
+      </div>
+    </header>
+    <main class="main">
+      <section class="cases" id="use-cases">
+        <div class="cases__circle"></div>
+        <div class="cases__circle cases__circle-top"></div>
+        <div class="cases__circle cases__circle-middle"></div>
+        <div class="container">
+          <h2 class="cases__title" data-aos="fade-up" data-aos-delay="200">
+            Our Suite of AI & Privacy Tools
+          </h2>
+          <div class="cases-cards">
+            <div
+              class="cases-cards__item"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <h4 class="cases-cards__title">AI Auditor</h4>
+              <p class="cases-cards__text">
+                An AI keen contract inspector may be a apparatus that
+                employments progressed calculations to analyze keen contracts
+                and recognize potential vulnerabilities or issues that may lead
+                to a trick or other security hazard. The inspector employments
+                machine learning techniques to recognize designs and
+                irregularities within the code, hailing potential issues for
+                encourage survey.
+              </p>
+              <div class="read-more">
+                <a href=""
+                  >Read More<svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    class="ml-2 inline-block h-5 w-5"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="cases-cards__item"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <h4 class="cases-cards__title">Privacy Mixer</h4>
+              <p class="cases-cards__text">
+                A security blender may be a device that can be utilized to
+                create cryptocurrency exchanges more private and mysterious. Too
+                known as a coin blender or coin tumbler, this apparatus works by
+                pooling numerous exchanges together, blending them, and after
+                that redistributing them to the planning beneficiaries.
+              </p>
+              <div class="read-more">
+                <a href=""
+                  >Read More<svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    class="ml-2 inline-block h-5 w-5"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="cases-cards__item"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <h4 class="cases-cards__title">Privacy DEX</h4>
+              <p class="cases-cards__text">
+                The security DEX aggregator could be a device that permits
+                clients to get to different decentralized trades (DEXs) in a
+                single stage, whereas too giving improved protection and
+                security highlights. DEXs are decentralized stages that permit
+                clients to exchange cryptocurrencies without the require for a
+                centralized specialist, and are known for their tall level of
+                security and security.
+              </p>
+              <div class="read-more">
+                <a href=""
+                  >Read More<svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    class="ml-2 inline-block h-5 w-5"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="cases-cards__item"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <h4 class="cases-cards__title">Anti-Rug AI</h4>
+              <p class="cases-cards__text">
+                The AI anti-rug bot is a tool currently in development by Privus
+                AI to help protect users from scams in the DeFi space. It works
+                by using advanced algorithms to analyze transactions and detect
+                suspicious behavior, such as setting a tax too high or removing
+                liquidity. If the bot detects any suspicious behavior, it will
+                automatically frontrun the transaction, preventing users from
+                getting rug pulled.
+              </p>
+              <div class="read-more">
+                <a href="r"
+                  >Read More<svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    class="ml-2 inline-block h-5 w-5"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="cases-cards__item"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <h4 class="cases-cards__title">AI Developer Hub</h4>
+              <p class="cases-cards__text">
+                The AI developer hub is a platform within Privus AI that allows
+                users to deploy their own custom smart contracts written by the
+                in-house AI, without the need for coding knowledge. The platform
+                uses advanced algorithms and machine learning techniques to
+                generate smart contracts that are safe and secure, reducing the
+                risk of scams and fraud.
+              </p>
+              <div class="read-more">
+                <a href=""
+                  >Read More<svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    class="ml-2 inline-block h-5 w-5"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="distributed" id="distributed">
+        <picture class="distibuted-picture">
+          <source
+            class="distributed-source"
+            media="(max-width: 1024px)"
+            srcset="images/distibuted-lines-1024.svg"
+          />
+          <source
+            class="distributed-source"
+            media="(max-width: 1280px)"
+            srcset="images/distibuted-lines-1280.svg"
+          />
+          <source
+            class="distributed-source"
+            media="(max-width: 1440px)"
+            srcset="images/distibuted-lines-1440.svg"
+          />
+          <source
+            class="distributed-source"
+            media="(max-width: 1728px)"
+            srcset="images/distibuted-lines-1728.svg"
+          />
+          <img
+            class="distributed__lines-left"
+            src="images/distibuted-lines.svg"
+            alt="lines"
+          />
+        </picture>
+        <picture class="distibuted-picture">
+          <source
+            class="distributed-source"
+            media="(max-width: 1024px)"
+            srcset="images/distibuted-lines2-1024.svg"
+          />
+          <source
+            class="distributed-source"
+            media="(max-width: 1280px)"
+            srcset="images/distibuted-lines2-1280.svg"
+          />
+          <source
+            class="distributed-source"
+            media="(max-width: 1440px)"
+            srcset="images/distibuted-lines2-1440.svg"
+          />
+          <img
+            class="distributed__lines-right"
+            src="images/distibuted-lines2.svg"
+            alt="lines"
+          />
+        </picture>
+        <div class="container">
+          <h2
+            class="distributed__title"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Our Core Values
+          </h2>
+          <div class="distributed-items">
+            <div
+              class="distributed-items__item distributed-items__item1"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <picture class="distributed-picture">
+                <img
+                  class="distributed-items__icon distributed-items__icon-1"
+                  src="images/distibuted-icon1.svg"
+                  alt="icon"
+                />
+              </picture>
+              <h4 class="distributed-items__title">Privacy</h4>
+              <p class="distributed-items__text">
+                Protection could be a foundational center esteem, emphasizing
+                client information security and exchange privacy. Protection is
+                prioritized to guarantee people have full control over their
+                individual data. Cutting-edge security advances and conventions
+                are executed inside the Privus AI biological system, empowering
+                secure and private exchanges.
+              </p>
+            </div>
+            <div
+              class="distributed-items__item distributed-items__item2"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <picture class="distributed-picture">
+                <img
+                  class="distributed-items__icon"
+                  src="images/distibuted-icon2.svg"
+                  alt="icon"
+                />
+              </picture>
+              <h4 class="distributed-items__title">Security</h4>
+              <p class="distributed-items__text distributed-items__text2">
+                Security is fundamental to us. A vigorous environment is kept up
+                to defend client resources and data. By utilizing thorough
+                security measures and conventions, potential dangers and
+                vulnerabilities are relieved. The center on security gives
+                clients with certainty and believe when locks in in exchanges
+                inside the stage.
+              </p>
+            </div>
+            <div
+              class="distributed-items__item distributed-items__item3"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <picture class="distributed-picture">
+                <img
+                  class="distributed-items__icon distributed-items__icon-3"
+                  src="images/distibuted-icon3.svg"
+                  alt="icon"
+                />
+              </picture>
+              <h4 class="distributed-items__title">Confidentiality</h4>
+              <p class="distributed-items__text">
+                Privacy may be a crucial esteem inside the Privus AI biological
+                system. The security of monetary exchanges and individual data
+                is profoundly respected. Progressed encryption and
+                privacy-enhancing innovations are utilized to guarantee the
+                secrecy of client information. The commitment to privacy
+                cultivates believe and peace of intellect for clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="roadmap-main" id="roadmap">
+        <div class="container">
+          <h2
+            class="roadmap-main__title-main"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            Roadmap
+          </h2>
+          <div class="roadmap-slider-wrapper">
+            <button class="roadmap-slider__prev">
+              <svg
+                class="roadmap-slider__prev-icon"
+                width="32"
+                height="16"
+                fill="none"
+              >
+                <path
+                  class="roadmap-slider__prev-path"
+                  d="M1 7a1 1 0 1 0 0 2V7zm30.707 1.707a1 1 0 0 0 0-1.414L25.343.929a1 1 0 0 0-1.414 1.414L29.586 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 9h30V7H1v2z"
+                  fill="#fff"
+                />
+              </svg>
+              <svg
+                class="roadmap-slider__prev-icon-1440"
+                width="24"
+                height="12"
+                viewBox="0 0 24 12"
+                fill="none"
+              >
+                <path
+                  class="roadmap-slider__next-path"
+                  d="M23.0532 6.68652C23.4674 6.68652 23.8032 6.35074 23.8032 5.93652C23.8032 5.52231 23.4674 5.18652 23.0532 5.18652L23.0532 6.68652ZM0.417629 5.4062C0.124737 5.69909 0.124737 6.17396 0.417629 6.46686L5.1906 11.2398C5.48349 11.5327 5.95837 11.5327 6.25126 11.2398C6.54415 10.9469 6.54415 10.4721 6.25126 10.1792L2.00862 5.93653L6.25126 1.69388C6.54415 1.40099 6.54415 0.926117 6.25126 0.633224C5.95837 0.340331 5.48349 0.340331 5.1906 0.633224L0.417629 5.4062ZM23.0532 5.18652L0.94796 5.18653L0.94796 6.68653L23.0532 6.68652L23.0532 5.18652Z"
+                  fill="white"
+                />
+              </svg>
+              <svg
+                class="roadmap-slider__prev-icon-1024"
+                width="21"
+                height="9"
+                viewBox="0 0 21 9"
+                fill="none"
+              >
+                <path
+                  class="roadmap-slider__next-path"
+                  d="M1.22363 4.05322C0.94749 4.05322 0.723633 4.27708 0.723633 4.55322C0.723633 4.82937 0.94749 5.05322 1.22363 5.05322V4.05322ZM20.1298 4.90678C20.3251 4.71151 20.3251 4.39493 20.1298 4.19967L16.9478 1.01769C16.7526 0.822427 16.436 0.822427 16.2407 1.01769C16.0455 1.21295 16.0455 1.52953 16.2407 1.7248L19.0692 4.55322L16.2407 7.38165C16.0455 7.57691 16.0455 7.89349 16.2407 8.08876C16.436 8.28402 16.7526 8.28402 16.9478 8.08876L20.1298 4.90678ZM1.22363 5.05322H19.7763V4.05322H1.22363V5.05322Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <div class="roadmap-slider swiper">
+              <div class="roadmap-slider__wrapper swiper-wrapper">
+                <div
+                  class="roadmap-slider__slide1 roadmap-slider__slide-default swiper-slide"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+                    <h3 class="roadmap-slider__slide-title">December 2022</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/roadmap-slide1-icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    CLORE.AI marketplace was publicly opened for the
+                    masses#Bitcoin is used for payments
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-1.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide2 roadmap-slider__slide-default swiper-slide"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+                    <h3 class="roadmap-slider__slide-title">February 2022</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/roadmap-slide2-icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Made big improvements based on user feedback, fixing
+                    hundreds of bugs.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-2.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide3 roadmap-slider__slide-default swiper-slide"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+                    <h3 class="roadmap-slider__slide-title">March 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-33.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Introduced an innovative proof-of-holding system. Users with
+                    CLORE coins get big bonuses for using the clore.ai platform.
+                    Added Hive OS support.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-3.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide4 roadmap-slider__slide-default swiper-slide"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+                    <h3 class="roadmap-slider__slide-title">April 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-34.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Users can now top-up their accounts in dollars and view logs
+                    in their accounts. + introduces maximum fair price feature.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-4.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide6 roadmap-slider__slide-default swiper-slide"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+                    <h3 class="roadmap-slider__slide-title">May 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/roadmap-slide3-icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Launched a secure cloud by buying a data center. Users can
+                    now use our computing power. Popular media like Bloomberg,
+                    Yahoo, and MarketWatch covered this
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-5.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide7 silder-bg__active roadmap-slider__slide-default swiper-slide"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+                    <h3 class="roadmap-slider__slide-title">June 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-4.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Rolled out pre-selected OC profiles for mining-grade
+                    machines. Customers can choose specific OC profiles given by
+                    hosting providers. This feature helps specialized miners.
+                    Added more forwarding nodes for faster service. Introduced a
+                    referral system.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-6.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide8 silder-bg__active roadmap-slider__slide-default swiper-slide"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+
+                    <h3 class="roadmap-slider__slide-title">July 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-38.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Introduced the Clore Mining feature. If a user's farm isn't
+                    rented out, it can automatically mine the top-paying coin
+                    and switch if a better one comes up.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-7.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide9 silder-bg__active roadmap-slider__slide-default swiper-slide"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+
+                    <h3 class="roadmap-slider__slide-title">June 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/roadwhite-5.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Added more options like Tensorflow, Pytorch with Jupyter
+                    Lab, and fitcrack. Introduced a review function.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-8.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide10 silder-bg__active roadmap-slider__slide-default swiper-slide"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+
+                    <h3 class="roadmap-slider__slide-title">August 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-36.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Used a neural network to set up MFP for new servers
+                    automatically.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-9.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide11 silder-bg__active roadmap-slider__slide-default swiper-slide"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+
+                    <h3 class="roadmap-slider__slide-title">September 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-310.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Clore got listed on the MEXC exchange. Clore.ai reached 20k
+                    open orders on the marketplace. Started a blog on
+                    blog.clore.ai. Users have now locked over 60m CLORE coins in
+                    proof-of-holding, which is about 1/3 of all coins.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-10.svg"
+                    alt="lines"
+                  />
+                </div>
+
+                <div
+                  class="roadmap-slider__slide12 silder-bg__active roadmap-slider__slide-default swiper-slide"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+
+                    <h3 class="roadmap-slider__slide-title">October 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-311.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Made major updates to MFP and set CLORE as the main payment
+                    method.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-11.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide13 silder-bg__active roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+
+                    <h3 class="roadmap-slider__slide-title">November 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-white-312.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Added private containers, improved the entire functionality
+                    of interaction with containers, Сoinex listing, Rate listing
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-12.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 silder-bg__active roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+
+                    <h3 class="roadmap-slider__slide-title">December 2023</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-white__4454.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Flux partnership, added zellcore wallet integration, paal
+                    partnership, xt listing
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-13.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 silder-bg__active roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <p class="roadmap-slider__slide-subtitle">Success</p>
+
+                    <h3 class="roadmap-slider__slide-title">January 2024</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-white-314.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Bitget Listing , added custom templates to containers
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-14.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <h3 class="roadmap-slider__slide-title">March 2024</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/roadmap-slide7-icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    We will introduce 2FA authentication and unveil a new design
+                    for the marketplace with added features.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-15.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <h3 class="roadmap-slider__slide-title">May 2024</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/roadmap-slide8-icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    We will release Clore VPN, potentially allowing
+                    <a href="#">clore.ai</a> hosting providers to lease their
+                    network as a VPN service
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-16.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <h3 class="roadmap-slider__slide-title">Q3 2024</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/roadmap-slide9-icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    We will launch a mining job marketplace that will link hash
+                    power to software and benchmarking. Clore will offer private
+                    hash power rentals with $CLORE payments.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-17.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 anim-big-text roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <h3 class="roadmap-slider__slide-title">Q3 2024</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-312.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Clore Storage will be introduced, where users can rent
+                    storage spaces for containers on clore.ai, which will be
+                    useful for data sharing between containers.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-18.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <h3 class="roadmap-slider__slide-title">Q4 2024</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-10.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    CLORE OS will be released with additional server monitoring
+                    features like GPU clock speeds, temperatures, and loads.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-19.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 anim-big-text roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <h3 class="roadmap-slider__slide-title">Q1 2025</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-12.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    Based on cloreOS, we will launch a unified marketplace. Each
+                    server will have its designated role. Servers equipped with
+                    powerful graphics cards will handle high-level computing
+                    tasks. If a server cannot handle complex tasks or none are
+                    available at the moment, the system will mine the most
+                    profitable coin. It will adjust all overclocks (within user
+                    permissions) and convert it to clore.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-20.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 anim-big-text roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <h3 class="roadmap-slider__slide-title">Q1 2025</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-13.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    The marketplace will be accessible to both companies and
+                    individuals. Owing to the integrated network, the service
+                    will tackle challenging tasks swiftly, be it rendering a
+                    blockbuster or training a complex language model. This will
+                    become the world's most efficient computing network. All
+                    transactions will be made exclusively in clore coin.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-21.svg"
+                    alt="lines"
+                  />
+                </div>
+                <div
+                  class="roadmap-slider__slide14 roadmap-slider__slide-default swiper-slide roadmap-slider__align"
+                >
+                  <div class="roadmap-box">
+                    <h3 class="roadmap-slider__slide-title">Q2 2025</h3>
+                    <img
+                      class="roadmap-slider__slide-icon"
+                      src="images/road-14.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <p class="roadmap-slider__slide-text">
+                    We will work on improving code efficiency to accommodate
+                    more providers and boost marketing efforts.
+                  </p>
+                  <img
+                    class="roadmap-slider__bottom-lines"
+                    src="images/road-waves-22.svg"
+                    alt="lines"
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="roadmap-slider__next">
+              <svg
+                class="roadmap-slider__next-icon"
+                width="32"
+                height="16"
+                fill="none"
+              >
+                <path
+                  class="roadmap-slider__next-path"
+                  d="M1 7a1 1 0 1 0 0 2V7zm30.707 1.707a1 1 0 0 0 0-1.414L25.343.929a1 1 0 0 0-1.414 1.414L29.586 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 9h30V7H1v2z"
+                  fill="#fff"
+                />
+              </svg>
+              <svg
+                class="roadmap-slider__next-icon-1440"
+                width="24"
+                height="12"
+                viewBox="0 0 24 12"
+                fill="none"
+              >
+                <path
+                  class="roadmap-slider__next-path"
+                  d="M23.0532 6.68652C23.4674 6.68652 23.8032 6.35074 23.8032 5.93652C23.8032 5.52231 23.4674 5.18652 23.0532 5.18652L23.0532 6.68652ZM0.417629 5.4062C0.124737 5.69909 0.124737 6.17396 0.417629 6.46686L5.1906 11.2398C5.48349 11.5327 5.95837 11.5327 6.25126 11.2398C6.54415 10.9469 6.54415 10.4721 6.25126 10.1792L2.00862 5.93653L6.25126 1.69388C6.54415 1.40099 6.54415 0.926117 6.25126 0.633224C5.95837 0.340331 5.48349 0.340331 5.1906 0.633224L0.417629 5.4062ZM23.0532 5.18652L0.94796 5.18653L0.94796 6.68653L23.0532 6.68652L23.0532 5.18652Z"
+                  fill="white"
+                />
+              </svg>
+              <svg
+                class="roadmap-slider__next-icon-1024"
+                width="21"
+                height="9"
+                viewBox="0 0 21 9"
+                fill="none"
+              >
+                <path
+                  class="roadmap-slider__next-path"
+                  d="M1.22363 4.05322C0.94749 4.05322 0.723633 4.27708 0.723633 4.55322C0.723633 4.82937 0.94749 5.05322 1.22363 5.05322V4.05322ZM20.1298 4.90678C20.3251 4.71151 20.3251 4.39493 20.1298 4.19967L16.9478 1.01769C16.7526 0.822427 16.436 0.822427 16.2407 1.01769C16.0455 1.21295 16.0455 1.52953 16.2407 1.7248L19.0692 4.55322L16.2407 7.38165C16.0455 7.57691 16.0455 7.89349 16.2407 8.08876C16.436 8.28402 16.7526 8.28402 16.9478 8.08876L20.1298 4.90678ZM1.22363 5.05322H19.7763V4.05322H1.22363V5.05322Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-inner__left">
+            <h2 class="footer-inner__title">Our Social Media</h2>
+            <div class="footer-inner__social">
+              <a
+                class="footer-inner__social-link"
+                href="https://twitter.com/PrivusAi"
+              >
+                <svg
+                  class="footer-inner__icon"
+                  width="27"
+                  height="22"
+                  viewBox="0 0 27 22"
+                  fill="none"
+                >
+                  <path
+                    class="footer-inner__path"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.5075 0.0853835C15.4161 0.549304 13.803 2.10932 13.2573 4.1957C13.108 4.76637 13.0551 5.86677 13.1499 6.43055L13.2028 6.74508H12.8693C12.3383 6.74508 11.1089 6.55709 10.2088 6.33824C8.21959 5.85459 6.26706 4.92489 4.53495 3.63656C4.17047 3.36547 3.39834 2.67131 2.81915 2.09403C2.23997 1.51668 1.75845 1.05315 1.7491 1.06388C1.67306 1.15155 1.40361 1.76029 1.27873 2.1268C0.691784 3.84899 1.0526 5.71103 2.27122 7.24899C2.50471 7.54373 2.8662 7.92342 3.07448 8.09267L3.45308 8.40052H3.2452C2.85916 8.40052 2.01756 8.19432 1.50015 7.97295L0.985921 7.75291V8.07949C0.985921 9.24578 1.60293 10.6605 2.5355 11.6325C3.2249 12.3511 3.90493 12.7806 4.8675 13.1054L5.39831 13.2845L5.06656 13.3422C4.88409 13.374 4.32461 13.3999 3.82319 13.3999C2.77828 13.3999 2.83229 13.3432 3.19325 14.0621C4.07606 15.8204 5.76809 17.0097 7.6351 17.1843L8.08032 17.226L7.79972 17.4398C7.64538 17.5574 7.3182 17.7764 7.0727 17.9263C5.16681 19.0905 3.03433 19.65 0.771538 19.5796C-0.0568639 19.5539 -0.0772336 19.5565 0.0705981 19.671C0.397513 19.9241 2.51865 20.927 3.24188 21.1705C5.06974 21.7858 6.44846 22.004 8.48367 21.9999C10.1956 21.9966 11.2355 21.869 12.697 21.4829C17.9216 20.103 21.998 16.031 23.5798 10.6116C23.9793 9.24314 24.1399 8.21027 24.1888 6.69628L24.2278 5.48873L24.5999 5.21009C25.3029 4.68379 26.4146 3.49506 26.8877 2.76388L27 2.59019L26.3842 2.82143C25.4183 3.18397 23.5849 3.59452 23.9768 3.36044C24.8649 2.8301 25.8073 1.66891 26.1605 0.670018L26.2594 0.390183L25.653 0.694055C24.899 1.07202 24.0848 1.38285 23.334 1.57945L22.7575 1.73043L22.3719 1.38523C21.6588 0.746764 20.751 0.289069 19.8156 0.0962433C19.216 -0.0273848 18.0408 -0.032881 17.5075 0.0853835Z"
+                    fill="#151419"
+                  />
+                </svg>
+              </a>
+              <a class="footer-inner__social-link" href="https://t.me/PrivusAi">
+                <svg
+                  class="footer-inner__icon"
+                  width="27"
+                  height="23"
+                  viewBox="0 0 27 23"
+                  fill="none"
+                >
+                  <path
+                    class="footer-inner__path"
+                    d="M10.5467 15.3008L10.1324 21.5071C10.7411 21.5071 11.01 21.2287 11.3498 20.8984L14.2742 18.0548L20.3583 22.5498C21.478 23.1676 22.2861 22.8477 22.565 21.5103L26.559 2.68912C26.9679 1.04968 25.934 0.306115 24.8629 0.792413L1.41028 9.83564C-0.190584 10.4777 -0.181251 11.3709 1.11847 11.7688L7.13694 13.6473L21.0703 4.85686C21.7281 4.45799 22.3318 4.67243 21.8363 5.11219L10.5463 15.3006L10.5467 15.3008Z"
+                    fill="#151419"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <p class="footer-inner__copyright">© PRIVUS.AI 2024</p>
+          </div>
+
+          <div class="footer__mobail">
+            <div class="footer__mobail-item">
+              <h2 class="footer-inner__title">Our Social Media</h2>
+              <div class="footer-inner__social">
+                <a
+                  class="footer-inner__social-link"
+                  href="https://twitter.com/PrivusAi"
+                >
+                  <svg
+                    class="footer-inner__icon"
+                    width="27"
+                    height="22"
+                    viewBox="0 0 27 22"
+                    fill="none"
+                  >
+                    <path
+                      class="footer-inner__path"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.5075 0.0853835C15.4161 0.549304 13.803 2.10932 13.2573 4.1957C13.108 4.76637 13.0551 5.86677 13.1499 6.43055L13.2028 6.74508H12.8693C12.3383 6.74508 11.1089 6.55709 10.2088 6.33824C8.21959 5.85459 6.26706 4.92489 4.53495 3.63656C4.17047 3.36547 3.39834 2.67131 2.81915 2.09403C2.23997 1.51668 1.75845 1.05315 1.7491 1.06388C1.67306 1.15155 1.40361 1.76029 1.27873 2.1268C0.691784 3.84899 1.0526 5.71103 2.27122 7.24899C2.50471 7.54373 2.8662 7.92342 3.07448 8.09267L3.45308 8.40052H3.2452C2.85916 8.40052 2.01756 8.19432 1.50015 7.97295L0.985921 7.75291V8.07949C0.985921 9.24578 1.60293 10.6605 2.5355 11.6325C3.2249 12.3511 3.90493 12.7806 4.8675 13.1054L5.39831 13.2845L5.06656 13.3422C4.88409 13.374 4.32461 13.3999 3.82319 13.3999C2.77828 13.3999 2.83229 13.3432 3.19325 14.0621C4.07606 15.8204 5.76809 17.0097 7.6351 17.1843L8.08032 17.226L7.79972 17.4398C7.64538 17.5574 7.3182 17.7764 7.0727 17.9263C5.16681 19.0905 3.03433 19.65 0.771538 19.5796C-0.0568639 19.5539 -0.0772336 19.5565 0.0705981 19.671C0.397513 19.9241 2.51865 20.927 3.24188 21.1705C5.06974 21.7858 6.44846 22.004 8.48367 21.9999C10.1956 21.9966 11.2355 21.869 12.697 21.4829C17.9216 20.103 21.998 16.031 23.5798 10.6116C23.9793 9.24314 24.1399 8.21027 24.1888 6.69628L24.2278 5.48873L24.5999 5.21009C25.3029 4.68379 26.4146 3.49506 26.8877 2.76388L27 2.59019L26.3842 2.82143C25.4183 3.18397 23.5849 3.59452 23.9768 3.36044C24.8649 2.8301 25.8073 1.66891 26.1605 0.670018L26.2594 0.390183L25.653 0.694055C24.899 1.07202 24.0848 1.38285 23.334 1.57945L22.7575 1.73043L22.3719 1.38523C21.6588 0.746764 20.751 0.289069 19.8156 0.0962433C19.216 -0.0273848 18.0408 -0.032881 17.5075 0.0853835Z"
+                      fill="#151419"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="footer-inner__social-link"
+                  href="https://t.me/PrivusAi"
+                >
+                  <svg
+                    class="footer-inner__icon"
+                    width="27"
+                    height="23"
+                    viewBox="0 0 27 23"
+                    fill="none"
+                  >
+                    <path
+                      class="footer-inner__path"
+                      d="M10.5467 15.3008L10.1324 21.5071C10.7411 21.5071 11.01 21.2287 11.3498 20.8984L14.2742 18.0548L20.3583 22.5498C21.478 23.1676 22.2861 22.8477 22.565 21.5103L26.559 2.68912C26.9679 1.04968 25.934 0.306115 24.8629 0.792413L1.41028 9.83564C-0.190584 10.4777 -0.181251 11.3709 1.11847 11.7688L7.13694 13.6473L21.0703 4.85686C21.7281 4.45799 22.3318 4.67243 21.8363 5.11219L10.5463 15.3006L10.5467 15.3008Z"
+                      fill="#151419"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer__mobail-item">
+              <p class="footer-inner__copyright">© PRIVUS.AI 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      data-cfasync="false"
+      src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
+  </body>
+
+  <!-- Mirrored from clore.ai/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Dec 2024 20:05:49 GMT -->
+</html>

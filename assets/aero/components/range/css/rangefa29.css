@@ -1,0 +1,183 @@
+.a-range {
+    padding: 12px 24px;
+    border: 1px solid var(--aero-gray3);
+    border-radius: 10px;
+}
+
+.a-range-title {
+    font-family: 'TT-Firs-Neue';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.26px;
+    text-align: left;
+    color: var(--aero-white60);
+}
+
+.a-range-title + .a-range-slider {
+    margin-top: 8px;
+}
+
+.a-range-slider {
+    position: relative;
+}
+
+.a-range-wrapper {
+    position: relative;
+    height: 16px;
+    overflow: hidden;
+}
+
+.a-range-wrapper > .a-range-bar,
+.a-range-wrapper > .a-range-inverse-bar-left,
+.a-range-wrapper > .a-range-inverse-bar-right {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--aero-red);
+}
+
+.a-range-wrapper > .a-range-inverse-bar-left,
+.a-range-wrapper > .a-range-inverse-bar-right {
+    background-color: var(--aero-gray2);
+}
+
+.a-range-wrapper > .a-range-inverse-bar-right {
+    right: 0;
+    left: initial;
+    z-index: 2;
+}
+
+.a-range-wrapper > .a-range-thumb-right,
+.a-range-wrapper > .a-range-thumb-left {
+    position: absolute;
+    top: 0;
+    height: 16px;
+    width: 3px;
+    border-radius: 2px;
+    background-color: var(--aero-red);
+}
+
+.a-range-wrapper > .a-range-thumb-left {
+    left: 0;
+}
+
+.a-range-wrapper > .a-range-thumb-right {
+    right: 0;
+}
+
+.a-range-value {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    color: var(--aero-white);
+}
+
+.a-range-value-item {
+    font-family: 'TT-Firs-Neue';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 0.04em;
+    color: var(--aero-white40);
+}
+
+.a-range-value-item > div {
+    display: inline;
+}
+
+.a-range-slider > input[type='range'] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    z-index: 3;
+    height: 16px;
+    top: 0px;
+    width: 100%;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+
+.a-range-slider > input[type='range']::-ms-track {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    color: transparent;
+}
+
+.a-range-slider > input[type='range']::-moz-range-track {
+    -moz-appearance: none;
+    background: transparent;
+    color: transparent;
+}
+
+.a-range-slider > input[type='range']:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+}
+
+.a-range-slider > input[type='range']:focus {
+    outline: none;
+}
+
+.a-range-slider > input[type='range']::-ms-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+    cursor: pointer;
+}
+
+.a-range-slider > input[type='range']::-moz-range-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+    cursor: pointer;
+}
+
+.a-range-slider > input[type='range']::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.a-range-slider > input:-webkit-autofill, .a-range-slider > input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+.host-clear-button {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    cursor: pointer;
+}
+
+.a-range-slider {
+    .aero-input {
+        width: 219px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .a-range-slider {
+        .aero-input {
+            width: 260px;
+        }
+    }
+}

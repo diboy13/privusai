@@ -1,0 +1,136 @@
+@import url('perfect-scrollbar.css');
+
+.a-select {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px;
+    border: 1px solid var(--aero-gray3);
+    border-radius: 10px;
+}
+
+.a-select-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+
+.a-select-group {
+    width: calc(100% - 32px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.a-select-group > div {
+    word-break: break-all;
+}
+
+.a-select-group > div:nth-child(1) {
+    max-width: calc(60% - 4px);
+}
+
+.a-select-group > div:nth-child(2) {
+    max-width: calc(40% - 4px);
+}
+
+.a-select-label {
+    font-family: 'TT-Firs-Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.26px;
+    text-align: left;
+    color: var(--aero-white60);
+}
+
+.a-select-selected {
+    font-family: 'TT-Firs-Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: right;
+    color: var(--aero-white);
+}
+
+.a-select-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    color: var(--aero-white60);
+}
+
+.a-select-icon-svg-minus,
+.a-select-icon-svg-plus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.a-select-icon-svg-minus {
+    opacity: 0;
+}
+
+.a-select-icon.is-open > .a-select-icon-svg-plus {
+    opacity: 0;
+}
+
+.a-select-icon.is-open > .a-select-icon-svg-minus {
+    opacity: 1;
+}
+
+.a-select-dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    transition: max-height 0.2s ease-in-out,
+    padding 0.2s ease-in-out;
+}
+
+.a-select-dropdown.is-open {
+    padding-right: 15px;
+    padding-top: 10px;
+    max-height: 512px;
+}
+
+.a-select-dropdown-button {
+    font-family: 'TT-Firs-Neue', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    width: 100%;
+    padding: 8px;
+    margin-left: 1px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--aero-white60);
+    transition: color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out,
+        background-color 0.2s ease-in-out;
+
+    &.selected {
+        border-color: var(--aero-red);
+    }
+}
+
+.a-select-dropdown-button:hover {
+    color: var(--aero-white);
+    background-color: var(--aero-red);
+}

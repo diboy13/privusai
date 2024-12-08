@@ -1,0 +1,49 @@
+:root {
+  /* формат цвета: --aero-цвет(процент прозрачности) */
+  /* --aero - говорит о том, что это уже наши цвета дизайна, чтобы не путать с другими */
+  --aero-black16: rgba(0, 0, 0, 0.16);
+  --aero-red: #F63737;
+  --aero-dark-red: #3E1818;
+  --aero-salmon: #F44F4F;
+  --aero-white: #FFFFFF;
+  --aero-white60: rgba(255, 255, 255, 0.6);
+  --aero-white40: rgba(255, 255, 255, 0.4);
+  --aero-white46: rgba(255, 255, 255, 0.46);
+  --aero-white20: rgba(255, 255, 255, 0.2);
+  --aero-white30: rgba(255, 255, 255, 0.3);
+  --aero-white24: rgba(255, 255, 255, 0.24);
+  --aero-white05: rgba(255, 255, 255, 0.05);
+  --aero-white01: rgba(255, 255, 255, 0.01);
+  --aero-almost-white: #ececec;
+  --aero-orange: #df8718;
+  --aero-green: #46ca93;
+  --aero-yellow: #f1de36;
+  --aero-gray: #222222;
+  --aero-gray2: #9F9F9F;
+  --aero-gray3: #505050;
+  --aero-gray4: #292929;
+  --aero-gray5: #8F889A;
+  --aero-light-gray: #A4A4A4;
+  --aero-gray20: rgba(80, 80, 80, 0.2);
+  --aero-gray46: rgba(80, 80, 80, 0.46);
+  --aero-gray50: rgba(80, 80, 80, 0.5);
+  --aero-black: #000000;
+  --aero-black40: rgba(0, 0, 0, 0.4);
+  --aero-modal-bg: #333333;
+
+  /* z-indexes */
+  --aero-tooltip-zindex: 1;
+
+  /* font sizes */
+  --aero-h1: 60px;
+  --aero-h2: 40px;
+  --aero-h3: 30px;
+  --aero-h4: 28px;
+  --aero-h5: 26px;
+  --aero-h6: 24px;
+  --aero-b1: 22px;
+  --aero-b2: 20px;
+  --aero-b3: 18px;
+  --aero-b4: 16px;
+  --aero-caption: 14px;
+}

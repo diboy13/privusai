@@ -1,0 +1,110 @@
+.sidebar-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 24px;
+  min-width: 301px;
+}
+
+.sidebar-menu-back {
+  margin-bottom: 24px;
+}
+
+.sidebar-menu-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sidebar-menu-mobile,
+.sidebar-menu-info {
+  display: none;
+}
+
+.sidebar-menu-link {
+  /*font-family: 'TT-Firs-Neue-500', sans-serif;*/
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 55px;
+  margin: 0;
+  padding: 16px 24px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: var(--aero-white60);
+}
+
+.sidebar-menu-link:hover {
+  background: var(--aero-red);
+  border: 1px solid var(--aero-red);
+  color: var(--aero-white);
+}
+
+.sidebar-menu-link.selected {
+  background: var(--aero-red);
+  border: 1px solid var(--aero-red);
+  color: var(--aero-white);
+}
+
+@media (max-width: 1199px) {
+  .sidebar-menu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+
+  .sidebar-menu-back {
+    position: absolute;
+    left: 0;
+    margin-bottom: 0;
+  }
+
+  .sidebar-menu-info {
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    color: var(--aero-white60);
+  }
+
+  .sidebar-menu-desktop {
+    display: none;
+  }
+
+  .sidebar-menu-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+
+    .sidebar-menu-link,
+    .aero-btn-primary {
+      min-width: 170px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar-menu-back {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .sidebar-menu-mobile.right {
+    justify-content: flex-end;
+  }
+}

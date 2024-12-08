@@ -1,0 +1,29 @@
+.a-box {
+  width: 100%;
+  max-width: 100%;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--aero-gray20);
+  background-color: var(--aero-gray20);
+}
+
+.a-box-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--aero-gray46);
+}
+
+.a-box-line-item {
+  font-family: "TT Firs Neue";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.a-box-line-item:first-child {
+  color: var(--aero-white60);
+}

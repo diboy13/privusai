@@ -1,0 +1,217 @@
+.mass-price-button {
+  /*margin-left: auto;*/
+  /*margin-right: 8px;*/
+  display: none;
+}
+
+#mass-price-modal {
+  #mass-price-gpu-list {
+    gap: 12px 12px;
+    display: flex;
+    flex-direction: column;
+
+    .gpu-prices:not(:last-child) {
+      border-bottom: 1px solid var(--aero-gray3);
+    }
+
+    .gpu-prices {
+      display: flex;
+      gap: 90px;
+
+      .rs-prices-usd_box {
+        border: none;
+        background: none;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      .price-inputs-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 8px
+      }
+
+      .gpu-servers-count {
+        border-radius: 8px;
+        border: 1px solid rgba(80, 80, 80, 0.50);
+        background: transparent;
+        display: flex;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 16px;
+
+        span {
+          color: var(--aero-light-gray);
+        }
+      }
+
+      [class$="rs-prices-usd_inputs_container"] {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .accordion-wrapper {
+        width: 100%;
+      }
+
+      .accordion-wrapper[open] {
+        .gpu-prices-title::after {
+          rotate: 0deg;
+        }
+      }
+
+      .gpu-prices-title {
+        display: flex;
+        margin-bottom: 12px;
+        padding-right: 25px;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        align-items: center;
+
+        .aero-b3 {
+          color: var(--aero-white60);
+        }
+      }
+
+      .gpu-prices-title::after,
+      .gpu-prices-title::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 20px;
+        height: 2px;
+        background-color: var(--aero-white60);
+        border-radius: 1px;
+        translate: 0 -35%;
+        transition: rotate 0.2s;
+        transform-origin: 50% 40%;
+      }
+
+      .gpu-prices-title::after {
+        rotate: -90deg;
+      }
+
+      .gpu-prices-extra-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        padding: 40px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        border-radius: 40px;
+        border: 1px solid rgba(80, 80, 80, 0.46);
+        background: #202020;
+
+        .gpu-prices-apply-button {
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+
+#new-gpu-prices-modal {
+  .a-modal-dialog {
+    .a-modal-footer-end {
+      >div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 8px;
+
+        button[id^="new-gpu-prices"] {
+          width: 160px;
+        }
+      }
+
+      #new-gpu-prices-cs-ba {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .ba-fd {
+          margin: 0;
+          height: 40px;
+
+          .ba-td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  #new-gpu-prices-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .new-gpu-price {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(80, 80, 80, 0.50);
+      font-family: "TT Firs Neue", sans-serif;
+
+      .new-gpu-price-column {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        max-width: 257px;
+        width: 100%;
+
+        &.new-gpu-price-column__arrow {
+          .new-gpu-price-column__body {
+            width: 100%;
+            align-items: center;
+          }
+        }
+
+        .new-gpu-price-column__title {
+          color: var(--aero-light-gray);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 135%;
+        }
+
+        .new-gpu-price-column__body {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+
+          .new-gpu-price__value {
+            color: var(--aero-white, #FFF);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 135%;
+            /* 18.9px */
+
+            span {
+              color: var(--aero-light-gray, #A4A4A4);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 135%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+#show-machine-uptime {
+    font-family: TT-Firs-Neue, sans-serif;
+    background-color: var(--aero-black40);
+
+    .uptime-window {
+        width: calc(100% - 80px);
+        height: calc(100% - 300px);
+    }
+
+    .ras-window {
+        display: flex;
+        gap: 24px;
+        border: none;
+        border-radius: 40px;
+        padding: 40px;
+        background-color: var(--aero-modal-bg);
+    }
+
+    .no-toplane {
+        justify-content: space-between;
+
+        .no-top-txt {
+            display: flex;
+            margin-left: 0;
+            width: auto;
+            font-size: 24px;
+        }
+
+        .no-top-close {
+            cursor: pointer;
+        }
+    }
+
+    .grafana-timeframes, .no-toplane {
+        border: none;
+    }
+
+    #uptime-body {
+        align-content: flex-start;
+
+        #grafana-uptime-f {
+            height: calc(100% - 80px);
+        }
+
+        .grafana-timeframes {
+            gap: 8px;
+        }
+
+        .grafana-time-btn {
+            height: 35px;
+            width: 80px;
+            border-radius: 15px;
+            border: 1px solid var(--aero-red);
+            background-color: transparent;
+            margin: 0;
+        }
+
+        .active-btn {
+            background-color: var(--aero-red);
+        }
+    }
+
+    #grafana-uptime-f {
+        margin-top: 24px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+}

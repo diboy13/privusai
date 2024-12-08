@@ -1,0 +1,27 @@
+.back-link {
+  /*font-family: "TT Firs Neue";*/
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--aero-white60);
+  transition: color 0.25s ease-in-out;
+}
+
+.back-link svg path {
+  transition: stroke 0.25s ease-in-out;
+}
+
+.back-link:hover {
+  color: var(--aero-white);
+
+  svg {
+    path {
+      stroke: var(--aero-white);
+    }
+  }
+}

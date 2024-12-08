@@ -1,0 +1,83 @@
+@media all and (min-width: 1610px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 1609px) {
+  .container {
+    margin: 0 40px;
+  }
+}
+
+@media all and (max-width: 1160px) {
+  #mt-Marketplace .layout {
+    width: auto;
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 1530px;
+  /*padding: 0 40px;*/
+  /*margin: 0 auto;*/
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 80px);
+}
+
+.layout-sidebar {
+  flex: 0.2;
+  margin-right: 40px;
+}
+
+.layout-content {
+  flex: 0.8;
+}
+
+@media (max-width: 1440px) {
+  .container {
+      max-width: 1360px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+      max-width: 1120px;
+      /*padding: 0 15px;*/
+  }
+
+  .layout-sidebar {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .layout {
+    flex-direction: column !important;
+    gap: 40px;
+  }
+
+  .layout-sidebar {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .layout-content {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+      max-width: 100%;
+  }
+}

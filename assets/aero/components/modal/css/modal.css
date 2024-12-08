@@ -1,0 +1,149 @@
+.a-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  opacity: 0;
+  z-index: 9999;
+  transition: opacity 0.15s linear;
+}
+
+.a-modal.show {
+  opacity: 1;
+}
+
+.a-modal.a-modal-open {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body.a-modal-open {
+  overflow: hidden;
+}
+
+.a-modal-dialog {
+  max-width: 882px;
+  min-width: 200px;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.a-modal-large>.a-modal-dialog {
+  max-width: 1530px;
+}
+
+.a-modal-small>.a-modal-dialog {
+  max-width: 600px;
+}
+
+.a-modal-content {
+  font-family: "TT Firs Neue";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+  pointer-events: auto;
+  background-color: var(--aero-gray4);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  outline: 0;
+  color: var(--aero-white);
+}
+
+.a-modal-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+  color: var(--aero-white);
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.a-modal-header {
+  margin-bottom: 24px;
+  padding-right: 30px;
+}
+
+.a-modal-title {
+  font-family: "TT Firs Neue";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.a-modal-body {
+  font-family: "TT Firs Neue";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--aero-white60);
+}
+
+.a-modal-body>p {
+  margin-bottom: 32px;
+}
+
+.a-modal-footer {
+  margin-top: 28px;
+}
+
+.a-modal-footer-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a-modal-footer-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.a-modal-footer-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.a-modal-footer-group>button {
+  width: 100%;
+  max-width: 50%;
+}
+
+.a-modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  opacity: 0;
+  background-color: #000;
+  transition: opacity 0.15s linear;
+  filter: blur(2px);
+}
+
+.a-modal-backdrop.show {
+  opacity: 0.5;
+}

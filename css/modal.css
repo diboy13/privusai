@@ -1,0 +1,713 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    overflow: auto;
+}
+@-webkit-keyframes unfoldIn {
+    0% {
+        -webkit-transform: scaleY(0.005) scaleX(0);
+        transform: scaleY(0.005) scaleX(0);
+    }
+    50% {
+        -webkit-transform: scaleY(0.005) scaleX(1);
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1) scaleX(1);
+        transform: scaleY(1) scaleX(1);
+    }
+}
+@keyframes unfoldIn {
+    0% {
+        -webkit-transform: scaleY(0.005) scaleX(0);
+        transform: scaleY(0.005) scaleX(0);
+    }
+    50% {
+        -webkit-transform: scaleY(0.005) scaleX(1);
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        -webkit-transform: scaleY(1) scaleX(1);
+        transform: scaleY(1) scaleX(1);
+    }
+}
+@-webkit-keyframes unfoldOut {
+    0% {
+        -webkit-transform: scaleY(1) scaleX(1);
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        -webkit-transform: scaleY(0.005) scaleX(1);
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        -webkit-transform: scaleY(0.005) scaleX(0);
+        transform: scaleY(0.005) scaleX(0);
+    }
+}
+@keyframes unfoldOut {
+    0% {
+        -webkit-transform: scaleY(1) scaleX(1);
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        -webkit-transform: scaleY(0.005) scaleX(1);
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        -webkit-transform: scaleY(0.005) scaleX(0);
+        transform: scaleY(0.005) scaleX(0);
+    }
+}
+.modal-content {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-animation: zoomIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation: zoomIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@-webkit-keyframes zoomIn {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes zoomIn {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+.close{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    z-index: 99;
+    transition: 0.3s;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.close:before,
+.close:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: 0.3s;
+    background: #ffffff;
+}
+.close:before{
+    width: 18px;
+    height: 2px;
+}
+.close:after{
+    width: 2px;
+    height: 18px;
+}
+
+.modal-order{
+    max-width: 1283px;
+    width: 100%;
+    background: linear-gradient(0deg, #080808, #080808),
+    linear-gradient(0deg, #222222, #222222);
+    position: relative;
+    border: 1px solid #222222;
+    border-radius: 20px;
+    padding: 30px 60px;
+}
+.modal-order h2{
+    font-family: 'TT Firs Neue';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.modal-order__flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.modal-order__left{
+    max-width: 512px;
+    width: 100%;
+}
+.mod-inp-marg{
+    margin-top: 40px;
+}
+.modal-order__left .configure-order__flex .configure-order__inp{
+    max-width: 156px;
+}
+.modal-order__tcp{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid #ffffff;
+    padding: 7px 0;
+}
+.modal-order__tcp span{
+    font-family: 'Gilroy';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+.delete-tcp{
+    opacity: 0.6;
+    position: absolute;
+    right: 25px;
+    display: flex;
+}
+.jupyter-password{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.jupyter-password .configure-order__inp{
+    max-width: 363px;
+    width: 100%;
+    margin-right: 10px;
+}
+.jupyter-password .btn-style{
+    margin-bottom: 4px;
+}
+.authorization__cnt span, .authorization__cnt strong, .authorization__pas p{
+    font-family: 'Gilroy';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+    color: #ffffff;
+}
+.authorization__cnt strong{
+    opacity: 0.50;
+}
+.authorization__pas{
+    display: flex;
+    align-items: center;
+    margin: 10px 0 15px;
+}
+.authorization__pas p{
+    opacity: 0.50;
+}
+
+#modal .modal-content{
+    height: auto;
+    padding: 20px 0;
+}
+#modal-error .modal-content{
+    height: auto;
+    padding: 20px 0;
+}
+.start-day-may .switch {
+    position: relative;
+    display: inline-block;
+    width: 63px;
+    height: 31px;
+}
+
+.start-day-may .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.start-day-may{
+    margin:  0 10px;
+}
+.start-day-may .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    background-color: #454C58;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.start-day-may .slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 3px;
+    margin-bottom: 1px;
+    background: #ffffff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.start-day-may input:checked + .slider {
+    background: #F63737;
+}
+.start-day-may input:checked + .slider:before {
+    -webkit-transform: translateX(29px);
+    -ms-transform: translateX(29px);
+    transform: translateX(29px);
+}
+.start-day-may .slider.round {
+    border-radius: 34px;
+}
+
+.start-day-may .slider.round:before {
+    border-radius: 50%;
+}
+.modal-order__right{
+    max-width: 580px;
+    width: 100%;
+    margin-left: 25px;
+}
+.modal-order__right .startup-first__block {
+    min-height: 683px;
+}
+.modal-order form>button{
+    margin: 0 auto;
+    max-width: 140px;
+    width: 100%;
+}
+.enough-balance{
+    margin-top: 30px;
+    border: 1px solid #F63737;
+    border-radius: 15px;
+    padding: 15px 22px;
+    background:  rgba(247, 55, 55, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.enough-balance span{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #ffffff;
+}
+.modal .creation-rental {
+    margin-top: 40px;
+}
+.delete-error-form{
+    width: 20px;
+    height: 20px;
+}
+.delete-error-form span{
+    width: 12px;
+    height: 2.5px;
+    background: #ffffff;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+}
+.delete-error-form span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 2px;
+    left: 4px;
+}
+.delete-error-form span:nth-child(2){
+    transform: rotate(45deg);
+    right: -4px;
+    top: 0;
+}
+
+.configure-order__arr {
+    position: absolute;
+    top: 17px;
+    right: 21px;
+}
+.configure-order__arr span{
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    display: block;
+}
+.inp-arrow__top{
+    transform: rotate(45deg);
+}
+.inp-arrow__bot{
+    transform: rotate(-135deg);
+}
+
+
+
+.modal-deposit{
+    background: rgba(8, 8, 8, 1);
+    border: 1px solid rgba(34, 34, 34, 1);
+    max-width: 591px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-deposit h2{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+}
+.modal-deposit__qr{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 33px;
+}
+.mod-minimum-deposit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.mod-minimum-deposit span{
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+
+}
+.mod-minimum-deposit strong{
+    color: rgba(246, 55, 55, 1);
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+
+}
+.modal-deposit__copy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border: 1px solid rgba(82, 82, 82, 1);
+    padding: 15px 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+.modal-deposit__copy span{
+    color: rgba(255, 255, 255, 0.60);
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+}
+
+#withdraw .modal-deposit{
+    max-width: 647px;
+}
+.btn-red-modal{
+    max-width: 139px;
+    width: 100%;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: relative;
+    background-color: #f73636;
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 500;
+    transition: .5s ease-out;
+    color: #fff;
+    z-index: 1;
+    margin: 0 auto;
+}
+.btn-red-modal:hover {
+    background-color: #fff;
+    color: #000;
+}
+.withdrawal__flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 46px;
+}
+.withdrawal__balance strong{
+    font-family: "Gilroy";
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    display: block;
+
+}
+.withdrawal__balance small{
+    color: rgba(82, 82, 82, 1);
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+    display: block;
+}
+
+.withdrawal-amount{
+    max-width: 376px;
+    width: 100%;
+
+}
+.withdrawal-amount label{
+    width: 100%;
+    display: flex;
+}
+.withdrawal-amount input{
+    width: 100%;
+    height: 53px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: rgba(8, 8, 8, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    border: 1px solid rgba(82, 82, 82, 1);
+}
+.withdrawal-amount input::placeholder{
+    color: rgba(255, 255, 255, 0.60);
+}
+.withdrawal-fee__cnt{
+    margin: 40px 0;
+}
+.withdrawal-fee, .withd-final-amount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.withdrawal-fee p, .withd-final-amount p{
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.withdrawal-fee span, .withd-final-amount span{
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.withd-final-amount{
+    margin-top: 15px;
+}
+.withd-final-amount span{
+    color: rgba(246, 55, 55, 1);
+}
+.modal-deposit form{
+    width: 100%;
+}
+@media (max-width: 1200px){
+    .mod-inp-marg {
+        margin-top: 20px;
+    }
+    .modal-order {
+        max-width: 950px;
+        padding: 30px 20px;
+    }
+}
+@media (max-width: 991px){
+    .modal-order__flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-order {
+        max-width: 600px;
+    }
+    .modal-order__tcp span {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .modal-order__right .startup-first__block {
+        min-height: 250px;
+    }
+    .modal-order__right {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .enough-balance span {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .enough-balance {
+        margin-top: 20px;
+        padding: 8px 21px;
+    }
+    .delete-error-form {
+        width: 16px;
+        height: 16px;
+    }
+    #modal .modal-content{
+        padding: 5px 0;
+    }
+    #modal-error .modal-content{
+        padding: 5px 0;
+    }
+
+    .modal-deposit {
+        max-width: 550px;
+        padding: 30px 30px;
+    }
+    .modal-deposit__qr {
+        margin-top: 30px;
+        margin-bottom: 24px;
+    }
+    #withdraw .modal-deposit {
+        max-width: 550px;
+    }
+}
+@media (max-width: 760px){
+    .modal-order__left .configure-order__flex .configure-order__inp {
+        max-width: 157%;
+    }
+    .modal-order h2 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .modal-order {
+        padding: 20px 18px;
+    }
+    .mod-inp-marg {
+        margin-top: 15px;
+    }
+    .enough-balance span {
+        text-align: center;
+    }
+    .withdrawal__flex {
+        gap: 20px;
+        margin-top: 32px;
+    }
+    .withdrawal__balance strong {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .withdrawal__balance small {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .withdrawal-amount input {
+        height: 50px;
+        padding: 12px 15px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 570px){
+    .modal .creation-rental {
+        margin-top: 20px;
+    }
+    .start-day-may .switch {
+        width: 53px;
+        height: 22px;
+    }
+    .start-day-may .slider:before {
+        height: 16px;
+        width: 16px;
+    }
+    .authorization__cnt span, .authorization__cnt strong, .authorization__pas p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .modal-deposit__copy span {
+        font-size: 15px;
+        line-height: 20px;
+        overflow: hidden;
+        width: 280px;
+    }
+    .mod-minimum-deposit span {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .mod-minimum-deposit strong {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .modal-deposit__qr {
+        margin-top: 24px;
+        margin-bottom: 22px;
+    }
+    .modal-deposit__qr img{
+        max-width: 190px;
+        width: 100%;
+    }
+    .modal-deposit h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .withdrawal-fee__cnt {
+        margin: 30px 0;
+    }
+    .withdrawal__balance strong {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .withdrawal__flex {
+        gap: 12px;
+        margin-top: 28px;
+    }
+    #withdraw .modal-deposit {
+        max-width: 350px;
+    }
+    .modal-deposit {
+        max-width: 350px;
+        padding: 30px 15px;
+    }
+    .withdrawal-fee span, .withd-final-amount span {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .withdrawal-fee p, .withd-final-amount p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
