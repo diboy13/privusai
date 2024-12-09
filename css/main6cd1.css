@@ -2592,8 +2592,8 @@ burger-remove-scroll {
 
 .read-more {
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .read-more a {
